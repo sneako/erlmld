@@ -49,7 +49,7 @@
 %% deaggregating the record for us, because the version of the KCL/MLD which is compatible
 %% with version 1.1.1 of the dynamo streams adapter doesn't properly deaggregate (doesn't
 %% include subsequence numbers in the records we see).
--define(KPL_AGG_MAGIC, <<16#00, 16#89, 16#9A, 16#C2>>).
+-define(KPL_AGG_MAGIC, <<16#F3, 16#89, 16#9A, 16#C2>>).
 
 %% magic number identifying deflate-compressed KPL record, compressed using
 %% zlib:compress/1.  the KPL checksum trailer is included in the deflated data.
